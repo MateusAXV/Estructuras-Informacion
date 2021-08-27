@@ -13,12 +13,12 @@ public class NumPar {
 
     private double numero = 0, residuo = numero % 2;
 
-    public NumPar(double numero, double reiduo) {
-        seNumero(numero);
-        seResiduo(residuo);
+    public NumPar() {
+        setNumero(numero);
+        setResiduo(residuo);
     }
 
-    private void seNumero(double numero) {
+    public void setNumero(double numero) {
         if (residuo == 0) {
             System.out.println("este numero es par");
             this.numero=numero;
@@ -28,7 +28,7 @@ public class NumPar {
 
     }
 
-    private void seResiduo(double residuo) {
+    private void setResiduo(double residuo) {
         this.residuo = residuo;
     }
 

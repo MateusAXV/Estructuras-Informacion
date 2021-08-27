@@ -13,7 +13,7 @@ public class Circulo {
 
     private double radio = 0, area = 0, pi = 3.141592654;
 
-    public Circulo(double radio, double area) {
+    public Circulo() {
         setRadio(radio);
         setArea(area);
     }

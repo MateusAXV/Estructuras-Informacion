@@ -14,21 +14,19 @@ public class Jugador {
     private String nombre;
     private int nivel;
 
-    public Jugador(String nombre, int nivel) {
+    public Jugador() {
         setNombre(nombre);
         setNivel(nivel);
     }
 
-    private void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    private void setNivel(int nivel) {
+    public void setNivel(int nivel) {
         if (nivel >= 0) {
 
             this.nivel = nivel;
-
-            System.out.println("beinvenido " + nombre + ", con nivel: " + nivel);
 
         } else {
             System.out.println("Valor Incorrecto");

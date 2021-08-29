@@ -18,9 +18,11 @@ public class Main {
         log.debug("Hello World : this is a debug message");
         log.info("Hello World : this is an info message");
 
+        tadCirculo();
+        
     }
 
-    public void tadCirculo() {
+    public static void tadCirculo() {
 
         Circulo circulo1 = new Circulo();
         circulo1.setRadio(5);
@@ -28,7 +30,7 @@ public class Main {
 
     }
 
-    public void tadJugador() {
+    public static void tadJugador() {
 
         Jugador j1 = new Jugador();
         j1.setNombre("Lucho");
@@ -37,7 +39,7 @@ public class Main {
 
     }
 
-    public void tadNumpar() {
+    public static void tadNumpar() {
 
         NumPar n1 = new NumPar();
         n1.setNumero(5);

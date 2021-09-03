@@ -25,7 +25,6 @@ public class Main {
         jugador1.MostrarVidasRestantes();
 //        jugador1.vidas--;
         jugador1.MostrarVidasRestantes();
-
         
         Juego jugador2 = new Juego(5,"2");
         jugador2.MostrarVidasRestantes();

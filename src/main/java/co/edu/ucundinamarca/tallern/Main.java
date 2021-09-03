@@ -17,7 +17,7 @@ public class Main {
     public static void main(String[] args) {
         log.debug("Hello World : this is a debug message");
         log.info("Hello World : this is an info message");
-
+        System.out.println("hola");
         tadCirculo();
         
     }

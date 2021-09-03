@@ -15,8 +15,7 @@ import org.apache.log4j.Logger;
 public class Main2 {
 
     static Logger log = Logger.getLogger(Main2.class.getName());
-    public static int vidas = 5;
-
+  
     public static void main(String[] args) {
 
         log.info("------------------CLASE MAIN2----------------");

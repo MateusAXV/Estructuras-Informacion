@@ -20,7 +20,7 @@ public class Circulo {
 
     public void setRadio(double radio) {
 
-        if (radio > 0) {
+        if (radio >= 0) {
             this.radio = radio;
         } else {
             System.out.println("Valor Incorrecto");

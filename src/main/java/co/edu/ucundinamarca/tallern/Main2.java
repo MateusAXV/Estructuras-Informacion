@@ -20,17 +20,17 @@ public class Main2 {
 
         log.info("------------------CLASE MAIN2----------------");
         
-        Juego jugador1 = new Juego(5, "1");
+        Juego jugador1 = new Juego(5, "1");//instancia de los jugadores
         Juego jugador2 = new Juego(5, "2");
         
         
-        jugador1.QuitaVida();
+        jugador1.QuitaVida();//restar una vida al jugador 1
+        jugador1.MostrarVidasRestantes();//mostrar vida jugador 1
+        
+        jugador1.ReiniciarPartida();//reestablecer las vidas de jugador 1
         jugador1.MostrarVidasRestantes();
         
-        jugador1.ReiniciarPartida();
-        jugador1.MostrarVidasRestantes();
-        
-        jugador1.ActualizaRecord();       
+        jugador1.ActualizaRecord();//actualizar vidas jugadores       
         jugador2.ActualizaRecord();
         
         

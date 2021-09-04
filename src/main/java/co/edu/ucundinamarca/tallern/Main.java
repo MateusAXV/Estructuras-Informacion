@@ -20,12 +20,12 @@ public class Main {
 //        log.info("***Hello World : this is an info message***");
         log.info("------------------CLASE MAIN----------------");
                
-        Juego jugador1 = new Juego(5,"1");
+        Juego jugador1 = new Juego(5,"1");//instancia del jugador1
         jugador1.MostrarVidasRestantes();
-//        jugador1.vidas--;
-        jugador1.MostrarVidasRestantes();
+//        jugador1.vidas--;//resta una vida al jugaro 1
+        jugador1.MostrarVidasRestantes();//mostrar vidas de jugador 1
         
-        Juego jugador2 = new Juego(5,"2");
+        Juego jugador2 = new Juego(5,"2");//instancia jugador 2
         jugador2.MostrarVidasRestantes();
         jugador1.MostrarVidasRestantes();
     }

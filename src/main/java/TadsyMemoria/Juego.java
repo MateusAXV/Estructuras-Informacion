@@ -20,7 +20,7 @@ public class Juego {
     private int vidasIniciales;//numero de vidas iniciales(necesario para hacer el reinicio)
     private int record = 0;//valor para establecer el record de vidas en los jugadores
     private boolean fin = false;//variable para indicar el fin del juego
-    
+
     static Logger log = Logger.getLogger(Juego.class.getName());//necesario para los mensajes e consola
 
     public Juego(int vidasIniciales, String nombre) {//constructor de la clase
@@ -63,8 +63,8 @@ public class Juego {
 
     public void ReiniciarPartida() {//metodo para reeestablecer la vida del jugador a su valor inicial
         log.info("Partida reiniciada");
-        vidas=vidasIniciales;
-      
+        vidas = vidasIniciales;
+
     }
 
     public void ActualizaRecord() {//metodo que compara y define el estado del record
@@ -74,7 +74,7 @@ public class Juego {
         } else if (vidas > record) {
             log.info("Record Superado");
             log.info(record);
-        } 
+        }
 
     }
 

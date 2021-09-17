@@ -14,11 +14,9 @@ public class Factorial {
     private int rta = 0;
 
     public int factorial(int numero) {
-        for (int i = 0; i < numero; i++) {
-
+        for (int i = numero; i > 0; i--) {
             rta = numero * (numero - 1);
             numero--;
-
         }
         return rta;
     }

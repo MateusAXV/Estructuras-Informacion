@@ -1,6 +1,7 @@
 
 package co.edu.ucundinamarca.tallern;
 
+import Recursividad.Factorial;
 import org.apache.log4j.Logger;
 
 /**
@@ -14,6 +15,11 @@ public class Main {
     public static void main(String[] args) {
         log.debug("Hello World : this is a debug message");
         log.info("Hello World : this is an info message");
+        
+       Factorial num1= new Factorial();
+      
+       log.info(num1.factorial(2));
+       
     }
 
 }

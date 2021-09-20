@@ -31,7 +31,7 @@ public class MainPruebaFunciones {
         exponente = teclado.nextInt();
         log.info("Potencia Recursiva: " + potencia(base, exponente));
 
-        //
+        
     }
 
 }

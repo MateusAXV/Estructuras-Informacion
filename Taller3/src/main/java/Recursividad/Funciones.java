@@ -5,11 +5,16 @@
  */
 package Recursividad;
 
+import co.edu.ucundinamarca.tallern.MainPruebaFunciones;
+import org.apache.log4j.Logger;
+
 /**
  *
  * @author A_Ximena_Vanegas_M
  */
 public class Funciones {
+
+    static Logger log = Logger.getLogger(MainPruebaFunciones.class.getName());
 
     public static int factorial(int numero) {//factorial de un numero con ciclo
         int rta = 1;
@@ -36,4 +41,12 @@ public class Funciones {
         }
     }
 
+    public static int mcd(int a, int b) { //Maximo comun Divisor
+        log.info("------Inicio MCD (" + a + "," + b + ")----------");
+        if (b == 0) {
+            return a;
+        }
+        log.info("------Fin MCD (" + a + "," + b + ")----------");
+        return mcd(b, a % b);
+    }
 }

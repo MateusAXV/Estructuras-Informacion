@@ -6,7 +6,7 @@
 package co.edu.ucundinamarca.tallern;
 
 import org.apache.log4j.Logger;
-import static Recursividad.Funciones.sucesion;
+import static Recursividad.Funciones.*;
 
 /**
  *
@@ -19,10 +19,11 @@ public class MainSucesion {
     public static void main(String[] args) {
 
         //Maximo Comun Divisor
-        log.info(sucesion(10));
+        log.info("Sucesion: " + sucesion(10));
+        log.info("contador sucesion: " + contador);
+        log.info("Sucesion Recursiva: " + sucesionRecursiva(10));
+        log.info("contador sucesion recursiva: " + contadorDos);
 
     }
-
-    
 
 }

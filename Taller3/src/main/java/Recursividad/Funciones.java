@@ -14,7 +14,8 @@ import org.apache.log4j.Logger;
  */
 public class Funciones {
 
-    static Logger log = Logger.getLogger(MainPruebaFunciones.class.getName());
+    static Logger log = Logger.getLogger(Funciones.class.getName());
+    public static int contador = 0, contadorDos = 0;
 
     public static int factorial(int numero) {//factorial de un numero con ciclo
         int rta = 1;
@@ -51,11 +52,28 @@ public class Funciones {
     }
 
     public static double sucesion(int n) { //Sucecion de recursividad en cascada
-        if (n < 0) {
+
+        contador++;
+
+        if (n == 0) {
             return 1;
+        } else if (n == 1) {
+            return 2;
         }
 
         return (0.91 * sucesion(n - 1)) + (0.1 * sucesion(n - 2));
+
+    }
+
+    public static double sucesionRecursiva(int n) {
+        contadorDos++;
+        if (n == 0) {
+            return 1;
+        } else if (n == 1) {
+            return 2;
+        }
+
+        return (0.91 * sucesionRecursiva(n - 1)) + (0.1 * sucesionRecursiva(n - 2));
 
     }
 }

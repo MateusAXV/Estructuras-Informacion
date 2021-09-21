@@ -19,7 +19,10 @@ public class MainSucesion {
     public static void main(String[] args) {
 
         log.info("Sucesion: " + sucesion(10));
-        log.info("contador sucesion: " + contador);
+        log.info("contador sucesion: " + contador);      
+        
+        log.info("Sucesion Iterativa: " + sucesionIterativa(10));
+
         
     }
 

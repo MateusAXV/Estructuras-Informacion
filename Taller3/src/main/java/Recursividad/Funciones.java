@@ -5,7 +5,6 @@
  */
 package Recursividad;
 
-import co.edu.ucundinamarca.tallern.MainPruebaFunciones;
 import org.apache.log4j.Logger;
 
 /**
@@ -15,7 +14,7 @@ import org.apache.log4j.Logger;
 public class Funciones {
 
     static Logger log = Logger.getLogger(Funciones.class.getName());
-    public static int contador = 0, contadorDos = 0;
+    public static int contador = 0;
 
     public static int factorial(int numero) {//factorial de un numero con ciclo
         int rta = 1;
@@ -64,7 +63,21 @@ public class Funciones {
         return (0.91 * sucesion(n - 1)) + (0.1 * sucesion(n - 2));
 
     }
-    
-        
+
+    public static double sucesionIterativa(int n) {
+        double aux = 0;
+
+        for (int i = 0; i <= n; i++) {
+            if (n == 0) {
+                aux = 1;
+            } else if (n == 1) {
+                aux = 2;
+            }
+
+            aux = (0.91 * n - 1) + (0.1 * n - 2);
+            n--;
+        }
+        return aux;
+    }
 
 }

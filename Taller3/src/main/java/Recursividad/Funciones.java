@@ -64,16 +64,7 @@ public class Funciones {
         return (0.91 * sucesion(n - 1)) + (0.1 * sucesion(n - 2));
 
     }
+    
+        
 
-    public static double sucesionRecursiva(int n) {
-        contadorDos++;
-        if (n == 0) {
-            return 1;
-        } else if (n == 1) {
-            return 2;
-        }
-
-        return (0.91 * sucesionRecursiva(n - 1)) + (0.1 * sucesionRecursiva(n - 2));
-
-    }
 }

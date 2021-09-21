@@ -5,22 +5,24 @@
  */
 package co.edu.ucundinamarca.tallern;
 
-import static Recursividad.Funciones.mcd;
 import org.apache.log4j.Logger;
+import static Recursividad.Funciones.sucesion;
 
 /**
  *
  * @author A_Ximena_Vanegas_M
  */
-public class MainMCD {
-    
-    static Logger log = Logger.getLogger(MainMCD.class.getName());
+public class MainSucesion {
+
+    static Logger log = Logger.getLogger(MainSucesion.class.getName());
 
     public static void main(String[] args) {
 
         //Maximo Comun Divisor
-        log.info(mcd(96, 36));
+        log.info(sucesion(10));
 
     }
+
+    
 
 }

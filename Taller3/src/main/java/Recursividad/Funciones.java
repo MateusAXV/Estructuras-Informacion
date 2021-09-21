@@ -49,4 +49,13 @@ public class Funciones {
         log.info("------Fin MCD (" + a + "," + b + ")----------");
         return mcd(b, a % b);
     }
+
+    public static double sucesion(int n) { //Sucecion de recursividad en cascada
+        if (n < 0) {
+            return 1;
+        }
+
+        return (0.91 * sucesion(n - 1)) + (0.1 * sucesion(n - 2));
+
+    }
 }

@@ -24,4 +24,17 @@ public class FuncionesTest {
         assertEquals(120, factorialRec(5));
     }
 
+    //funcion que prueba un numero elevado a una potencia
+    @Test
+    public void potenciaRecursiva() {
+        //se evaluara la potenica de 5^2, qye es 25
+        assertEquals(25, potencia(5, 2));
+    }
+
+    //funcion que prueba la sucesion recusiva
+    @Test
+    public void sucesionRec() {
+        assertEquals(2.0737240167276587, sucesion(10));
+    }
+
 }

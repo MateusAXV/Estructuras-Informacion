@@ -27,7 +27,7 @@ public class FuncionesTest {
     //funcion que prueba un numero elevado a una potencia
     @Test
     public void potenciaRecursiva() {
-        //se evaluara la potenica de 5^2, qye es 25
+        //se evaluara la potenica de 5^2, que es 25
         assertEquals(25, potencia(5, 2));
     }
 

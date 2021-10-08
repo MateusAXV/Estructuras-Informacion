@@ -1,10 +1,8 @@
-
 package co.edu.ucundinamarca.tallern;
 
 
-
+import static co.edu.ucundinamarca.tallern.Main.listaDulces;
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 import org.junit.Test;
 
 /**
@@ -14,14 +12,10 @@ import org.junit.Test;
 public class MainTest {
 
     @Test
-    public void testSuma() {
-        String text = "Text";
-        assertEquals("Text", text);
-    }
-
-    @Test
-    public void testSuma2() {
-        assertTrue(1 + 1 == 2);
+    public void testImprimirIterando() {        
+        //este metodo añade 10 dulces de forma automatica, incluido un ChocoRamo
+        listaDulces.añadirDiezDulces();
+        assertEquals((int) 10, (int) listaDulces.arreglo.size());
     }
 
 }

@@ -5,8 +5,9 @@
  */
 package clases;
 
-import co.edu.ucundinamarca.tallern.Main;
+
 import java.util.ArrayList;
+import java.util.List;
 import org.apache.log4j.Logger;
 
 /**
@@ -18,24 +19,34 @@ public class Dulces {
     static Logger log = Logger.getLogger(Dulces.class.getName());
 
     //---------------------------ArrayList
-    public ArrayList<String> arreglo;
-
-    //imprime el contenido del arreglo de forma iterativa
-    public void imprimirIterando() {
-        for (int i = 0; i <= arreglo.size(); i++) {
-            log.info(arreglo.get(i));
-        }
-    }
+    public static List<String> arreglo = new ArrayList<>();
 
     //este metodo añade 10 dulces de forma automatica, incluido un ChocoRamo
-    public void añadirDiezDulces() {
-        for (int i = 0; i <= 3; i++) {
+    public static void añadirDiezDulces() {
+        arreglo.add("ChocoRamo");
+        for (int i = 1; i <= 3; i++) {
             arreglo.add("Menta");
             arreglo.add("Chicle");
-            arreglo.add("Galleta");
+            arreglo.add("Galletas");
         }
-        arreglo.add("ChocoRamo");
 
+    }
+
+    //imprime el contenido del arreglo de forma iterativa
+    public static void imprimirIterando() {
+        
+        for ( int i = 0; i < arreglo.size(); i++) {
+            log.info(arreglo.get(i));
+        }
+        
+        
+    }
+
+    //imprime el contenido del arreglo de forma no iterativa
+    public static void imprimirSinIterador() {
+        for (String dulces : arreglo) {
+            log.info(dulces);
+        }
     }
 
 }

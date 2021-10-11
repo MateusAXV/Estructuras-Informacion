@@ -10,7 +10,7 @@ package clases;
  * @author A_Ximena_Vanegas_M
  */
 public interface Listable {
-    
+
     //agrega un elemento a la lista
     public void agregar(Object parametro);
 
@@ -18,7 +18,7 @@ public interface Listable {
     public boolean contiene(int parametro);
 
     //imprime el contenido del arreglo con un iterador
-    public void Iterador();
+    public int Iterador();
 
     //elimina el objeto indicado, si es que existe
     public void eliminar(int parametro);
@@ -26,8 +26,11 @@ public interface Listable {
     //retorna un valor booleano si la lista esta vacia o no
     public boolean estaVacia();
 
+    //retorna el primer elemneto de la lista
+    public Object primerElemento();
+
     //este metodo sustituye un elmento 
-    public void sustituir(Object pAntiguo, Object pNuevo);
+    public void sustituir(int pAntiguo, int pNuevo);
 
     //este metodo limpia toda la lista
     public void vaciar();

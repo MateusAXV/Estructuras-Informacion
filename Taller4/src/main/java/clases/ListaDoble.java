@@ -9,35 +9,31 @@ package clases;
  *
  * @author A_Ximena_Vanegas_M
  */
-public class ListaSimple implements Listable {
+public class ListaDoble implements Listable {
 
     private Nodo cabeza = null;
     private int longitud = 0;
 
-    public Object contiene() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     public class Nodo {
 
-        public Object elemento;//valor almacenado en el nodo
-        public Nodo siguiente;//referencia al siguiente elemento         
+        public Object inicio;//valor almacenado en el nodo
+        public Nodo fin;//referencia al fin          
 
         Nodo(Object valor) {
             this(valor, null);
         }
 
         Nodo(Object valor, Nodo n) {
-            elemento = valor;
-            siguiente = n;
+            inicio = valor;
+            fin = n;
         }
 
-        public Object obtenerElemento() {
-            return elemento;
+        public Object obtenerInicio() {
+            return inicio;
         }
 
-        public Nodo obtenerSgte() {
-            return siguiente;
+        public Nodo obtenerFin() {
+            return fin;
         }
     }
 
@@ -45,12 +41,12 @@ public class ListaSimple implements Listable {
     //agrega elementos a la lista
     public void agregar(Object parametro) {
         Nodo nodo = new Nodo(parametro);
-        nodo.siguiente = cabeza;
+        nodo.fin = cabeza;
         cabeza = nodo;
         longitud++;
     }
 
-    //metodo para busacr un elemento
+    //metodo para busacr un inicio
     public boolean contiene(int parametro) {
         if (cabeza == null) {
             return false;
@@ -58,8 +54,8 @@ public class ListaSimple implements Listable {
 
             Nodo puntero = cabeza;
             int contador = 0;
-            while (contador < parametro && puntero.siguiente != null) {
-                puntero = puntero.siguiente;
+            while (contador < parametro && puntero.fin != null) {
+                puntero = puntero.fin;
                 contador++;
             }
             if (contador != parametro) {
@@ -76,24 +72,24 @@ public class ListaSimple implements Listable {
         return longitud;
     }
 
-    //metodo que elimina un elemento
+    //metodo que elimina un inicio
     public void eliminar(int parametro) {
         if (cabeza != null) {
             if (parametro == 0) {
                 Nodo primer = cabeza;
-                cabeza = cabeza.siguiente;
-                primer.siguiente = null;
+                cabeza = cabeza.fin;
+                primer.fin = null;
                 longitud--;
             } else if (parametro < longitud) {
                 Nodo puntero = cabeza;
                 int contador = 0;
                 while (contador < (parametro - 1)) {
-                    puntero = puntero.siguiente;
+                    puntero = puntero.fin;
                     contador++;
                 }
-                Nodo temp = puntero.siguiente;
-                puntero.siguiente = temp.siguiente;
-                temp.siguiente = null;
+                Nodo temp = puntero.fin;
+                puntero.fin = temp.fin;
+                temp.fin = null;
                 longitud--;
             }
         }
@@ -134,8 +130,8 @@ public class ListaSimple implements Listable {
         for (int i = 0; i < longitud; i++) {
             if (cabeza != null) {
                 Nodo primer = cabeza;
-                cabeza = cabeza.siguiente;
-                primer.siguiente = null;
+                cabeza = cabeza.fin;
+                primer.fin = null;
 
             }
         }

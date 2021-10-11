@@ -87,7 +87,7 @@ public class Lista {
         return longitud;
     }
 
-    //me indicasi la lista esta vacia
+    //me indica si la lista esta vacia
     public boolean estaVacia() {
         return cabeza == null;
     }

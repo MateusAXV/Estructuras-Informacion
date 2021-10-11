@@ -16,7 +16,7 @@ import org.junit.Test;
 public class testListaSimple {
 
     @Test
-    public void testEstavacia() {
+    public void testEstaVacia() {
         ListaSimple prueba1 = new ListaSimple();
         //como no se han agregado datos, la lista esta vacia
         assertEquals(true, prueba1.estaVacia());

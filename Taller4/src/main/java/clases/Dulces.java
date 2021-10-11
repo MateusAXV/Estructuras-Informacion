@@ -5,8 +5,8 @@
  */
 package clases;
 
-
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import org.apache.log4j.Logger;
 
@@ -32,17 +32,17 @@ public class Dulces {
 
     }
 
-    //imprime el contenido del arreglo de forma iterativa
+    //imprime el contenido del arreglo con un iterador
     public static void imprimirIterando() {
-        
-        for ( int i = 0; i < arreglo.size(); i++) {
-            log.info(arreglo.get(i));
+        //objeto de tipo iterator para recorrer el arreglo e imprimirlo 
+        Iterator< String> it = arreglo.iterator();
+
+        while (it.hasNext()) {
+            log.info(it.next());
         }
-        
-        
     }
 
-    //imprime el contenido del arreglo de forma no iterativa
+    //imprime el contenido del arreglo sin un iterador
     public static void imprimirSinIterador() {
         for (String dulces : arreglo) {
             log.info(dulces);

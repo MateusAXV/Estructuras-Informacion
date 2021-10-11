@@ -5,71 +5,31 @@
  */
 package clases;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import org.apache.log4j.Logger;
-
 /**
  *
  * @author A_Ximena_Vanegas_M
  */
 public interface Listable {
-
-//OBJETOS
-    static Logger log = Logger.getLogger(Listable.class.getName());
-    List<String> lista = new ArrayList<>();
-    //objeto de tipo iterator para recorrer el arreglo e imprimirlo 
-    Iterator< String> it = lista.iterator();
-
+    
     //agrega un elemento a la lista
-    public static void agregar(Object parametro) {
-        lista.add((String) parametro);
-    }
+    public void agregar(Object parametro);
 
     //indica si el parametro u objeto existe
-    public static boolean contiene(Object parametro) {
-        return lista.contains(parametro);
-    }
+    public boolean contiene(int parametro);
 
     //imprime el contenido del arreglo con un iterador
-    public static void Iterador() {
-        while (it.hasNext()) {
-            log.info(it.next());
-        }
-    }
+    public void Iterador();
 
     //elimina el objeto indicado, si es que existe
-    public static void eliminar(Object parametro) {
-        lista.remove(parametro);
-    }
+    public void eliminar(int parametro);
 
     //retorna un valor booleano si la lista esta vacia o no
-    public static boolean estaVacia() {
-        if (lista.isEmpty()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+    public boolean estaVacia();
 
     //este metodo sustituye un elmento 
-    public static void sustituir(Object pAntiguo, Object pNuevo) {
-        for (int i = 0; i < lista.size(); i++) {
-
-            if (pAntiguo == lista.get(i)) {
-                int Temporal = i;//guardamos la posicion del dato solicitado
-                boolean bandera = true;
-                lista.set(Temporal, (String) pNuevo);
-
-            }
-
-        }
-    }
+    public void sustituir(Object pAntiguo, Object pNuevo);
 
     //este metodo limpia toda la lista
-    public static void vaciar() {
-        lista.clear();
-    }
+    public void vaciar();
 
 }

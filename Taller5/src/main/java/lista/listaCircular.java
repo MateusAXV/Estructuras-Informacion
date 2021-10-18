@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 public class listaCircular {
 
     Nodo ultimo;
+    int longitud = 0;
     static Logger log = Logger.getLogger(listaCircular.class.getName());
 
     public listaCircular() {
@@ -34,6 +35,7 @@ public class listaCircular {
             ultimo.siguiente = nuevo;
         }
         ultimo = nuevo;
+        longitud++;
         return this;
     }
 
@@ -61,6 +63,7 @@ public class listaCircular {
             }
             aux = null;
         }
+        longitud--;
         return encontrado == true;
     }
 
@@ -75,4 +78,8 @@ public class listaCircular {
         JOptionPane.showMessageDialog(null, cadena);
     }
 
+    //metodo para contrar los nodos
+    public int contar() {
+        return longitud;
+    }
 }

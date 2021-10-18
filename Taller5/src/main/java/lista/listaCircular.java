@@ -55,15 +55,16 @@ public class listaCircular {
             Nodo aux = actual.siguiente;
             if (ultimo == ultimo.siguiente) {
                 ultimo = null;
+
             } else {
                 if (aux == ultimo) {
                     ultimo = actual;
                 }
                 actual.siguiente = aux.siguiente;
+                longitud--;
             }
             aux = null;
         }
-        longitud--;
         return encontrado == true;
     }
 
@@ -75,7 +76,7 @@ public class listaCircular {
             cadena = cadena + "[" + aux.dato + "]->";
             aux = aux.siguiente;
         } while (aux != ultimo.siguiente);
-        JOptionPane.showMessageDialog(null, cadena);
+        JOptionPane.showMessageDialog(null, "Longitud Lista: " + contar() + "\n" + cadena);
     }
 
     //metodo para contrar los nodos

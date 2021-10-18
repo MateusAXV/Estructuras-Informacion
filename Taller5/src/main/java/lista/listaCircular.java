@@ -37,6 +37,33 @@ public class listaCircular {
         return this;
     }
 
+    //metodo para eliminar Nodo   
+    public boolean eliminar(int elemento) {
+        Nodo actual;
+        boolean encontrado = false;
+        actual = ultimo;
+        while (actual.siguiente != ultimo && !encontrado) {
+            encontrado = (actual.siguiente.dato == elemento);
+            if (!encontrado) {
+                actual = actual.siguiente;
+            }
+        }
+        encontrado = (actual.siguiente.dato == elemento);
+        if (encontrado) {
+            Nodo aux = actual.siguiente;
+            if (ultimo == ultimo.siguiente) {
+                ultimo = null;
+            } else {
+                if (aux == ultimo) {
+                    ultimo = actual;
+                }
+                actual.siguiente = aux.siguiente;
+            }
+            aux = null;
+        }
+        return encontrado == true;
+    }
+
     //metodo para mostrar la lista
     public void mostrarLista() {
         Nodo aux = ultimo.siguiente;

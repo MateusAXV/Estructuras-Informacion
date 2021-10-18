@@ -19,6 +19,7 @@ public class Main {
 
         listaCircular lista = new listaCircular();
         int opcion = 0, elemento;
+        boolean eliminado = false;
 
         do {
 
@@ -33,11 +34,26 @@ public class Main {
                 switch (opcion) {
                     case 1:
                         elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
-                                "Ingrese el elemento del Nodo",
+                                "Ingrese el elemento del Nodo", "Agregando...",
                                 JOptionPane.INFORMATION_MESSAGE));
                         lista.insertar(elemento);
                         break;
                     case 2:
+                        if (lista.estaVacia()) {
+                            JOptionPane.showMessageDialog(null, "Lista Vacia");
+                        } else {
+                            elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                    "Ingrese el elemento del Nodo a eliminar", "Eliminando...",
+                                    JOptionPane.INFORMATION_MESSAGE));
+                            eliminado = lista.eliminar(elemento);
+                            if (eliminado) {
+                                JOptionPane.showMessageDialog(null,
+                                        "El Elemento Eliminado Es: " + elemento);
+                            } else {
+                                JOptionPane.showMessageDialog(null,
+                                        "El Elemento " + elemento + " no esta en la lista ");
+                            }
+                        }
                         break;
                     case 3:
                         if (!lista.estaVacia()) {
@@ -47,7 +63,8 @@ public class Main {
                         }
                         break;
                     case 4:
-                        JOptionPane.showMessageDialog(null, "Aplicacion Finalizada");
+                        JOptionPane.showMessageDialog(null, "Aplicacion Finalizada", "Saliendo...",
+                                JOptionPane.INFORMATION_MESSAGE);
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "La opcion no esta en el menu");

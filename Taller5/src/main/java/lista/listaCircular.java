@@ -5,6 +5,7 @@
  */
 package lista;
 
+import javax.swing.JOptionPane;
 import org.apache.log4j.Logger;
 
 /**
@@ -12,10 +13,10 @@ import org.apache.log4j.Logger;
  * @author A_Ximena_Vanegas_M
  */
 public class listaCircular {
-    
+
     Nodo ultimo;
     static Logger log = Logger.getLogger(listaCircular.class.getName());
-    
+
     public listaCircular() {
         ultimo = null;
     }
@@ -42,10 +43,9 @@ public class listaCircular {
         String cadena = "";
         do {
             cadena = cadena + "[" + aux.dato + "]->";
+            aux = aux.siguiente;
         } while (aux != ultimo.siguiente);
-        log.info(cadena);        
+        JOptionPane.showMessageDialog(null, cadena);
     }
-    
-    //19.54
-    
+
 }

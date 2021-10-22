@@ -21,7 +21,7 @@ public class listaCircularDoble {
         primero = null;
         ultimo = null;
     }
-
+//ingresar nodos
     public void ingresar(int elemento) {
         nodo nuevo = new nodo();
         nuevo.datos = elemento;
@@ -37,7 +37,7 @@ public class listaCircularDoble {
             primero.anterior = ultimo;
         }
     }
-
+//mostrar lista
     public void mostrar() {
         nodo actual = new nodo();
         actual = primero;
@@ -46,5 +46,24 @@ public class listaCircularDoble {
             actual = actual.siguiente;
         } while (actual != primero);
     }
-
+//buscar nodo
+    public void buscar(int elemento) {
+        nodo actual = new nodo();
+        actual = ultimo;
+        boolean encontrado = false;
+        int dato = 0;
+        do {
+            if (actual.datos == elemento) {
+                encontrado = true;
+                elemento = actual.datos;
+            }
+            actual = actual.anterior;
+        } while (actual != ultimo);
+        if (encontrado == true) {
+            log.info("nodo encontrado");
+            log.info(dato);
+        } else {
+            log.info("nodo no encontrado");
+        }
+    }
 }

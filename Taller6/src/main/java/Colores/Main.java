@@ -25,9 +25,9 @@ public class Main {
 
             try {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
-                        "1. Agregar Nodo a la lista circular\n"
-                        + "2. Eliminar Nodo de la lista circular\n"
-                        + "3. Mostrar lista circular\n"
+                        "1. Agregar color a la lista \n"
+                        + "2. Eliminar color de la lista \n"
+                        + "3. Mostrar los colores de la lista\n"
                         + "4, Salir\n"
                         + "Que deseas hacer ?\n",
                         JOptionPane.INFORMATION_MESSAGE));

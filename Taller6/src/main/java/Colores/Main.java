@@ -27,7 +27,7 @@ public class Main {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
                         "1. Agregar color a la lista \n"
                         + "2. Eliminar color de la lista \n"
-                        + "3. Mostrar los colores de la lista\n"
+                        + "3. Mostrar los colores\n"
                         + "4, Salir\n"
                         + "Que deseas hacer ?\n",
                         JOptionPane.INFORMATION_MESSAGE));

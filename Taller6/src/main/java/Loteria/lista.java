@@ -29,11 +29,6 @@ public class lista {
 
     //Metodo para insertar Nodos
 
-    /**
-     *
-     * @param elemento
-     * @return
-     */
     public lista insertar(int elemento) {
         Nodo nuevo = new Nodo(elemento);
         if (ultimo != null) {

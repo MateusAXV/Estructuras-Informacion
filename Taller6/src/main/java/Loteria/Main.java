@@ -16,52 +16,34 @@ public class Main {
 //        log.debug("Hello World : this is a debug message");
 //        log.info("Hello World : this is an info message");
 
-        lista colores = new lista();
-        int opcion = 0,elemento;
-        boolean eliminado = false;
+        lista numeros = new lista();
+        int opcion = 0, elemento;
+        boolean bandera = false;
 
         do {
 
             try {
                 opcion = Integer.parseInt(JOptionPane.showInputDialog(null,
-                        "1. Agregar color a la lista \n"
-                        + "2. Eliminar color de la lista \n"
-                        + "3. Mostrar los colores\n"
-                        + "4, Salir\n"
+                        "1. Agregar un numero para jugar \n"
+                        + "2. Mostrar los numeros ingresados para la loteria\n"
+                        + "3, Salir\n"
                         + "Que deseas hacer ?\n",
                         JOptionPane.INFORMATION_MESSAGE));
                 switch (opcion) {
                     case 1:
                         elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
-                                "Ingrese el elemento del Nodo", "Agregando...",
+                                "Ingrese el elemento ", "Agregando...",
                                 JOptionPane.INFORMATION_MESSAGE));
-                        colores.insertar(elemento);
+                        numeros.insertar(elemento);
                         break;
                     case 2:
-                        if (colores.estaVacia()) {
-                            JOptionPane.showMessageDialog(null, "Lista Vacia");
+                        if (!numeros.estaVacia()) {
+                            numeros.mostrarLista();
                         } else {
-                            elemento = Integer.parseInt(JOptionPane.showInputDialog(null,
-                                    "Ingrese el elemento del Nodo a eliminar", "Eliminando...",
-                                    JOptionPane.INFORMATION_MESSAGE));
-                            eliminado = colores.eliminar(elemento);
-                            if (eliminado) {
-                                JOptionPane.showMessageDialog(null,
-                                        "El Elemento Eliminado Es: " + elemento);
-                            } else {
-                                JOptionPane.showMessageDialog(null,
-                                        "El Elemento " + elemento + " no esta en la lista ");
-                            }
+                            JOptionPane.showMessageDialog(null, "Lista Vacia");
                         }
                         break;
                     case 3:
-                        if (!colores.estaVacia()) {
-                            colores.mostrarLista();
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Lista Vacia");
-                        }
-                        break;
-                    case 4:
                         JOptionPane.showMessageDialog(null, "Aplicacion Finalizada", "Saliendo...",
                                 JOptionPane.INFORMATION_MESSAGE);
                         break;
@@ -74,7 +56,7 @@ public class Main {
                 JOptionPane.showMessageDialog(null, "Error " + n.getMessage());
             }
 
-        } while (opcion != 4);
+        } while (opcion != 3);
 
     }
 

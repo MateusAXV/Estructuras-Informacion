@@ -6,7 +6,7 @@
 package PilasYColas;
 
 import PilasYColas.NodoCola.ColaLista;
-import PilasYColas.NodoPila.*;
+import PilasYColas.NodoPila.PilaLista;
 import org.apache.log4j.Logger;
 
 /**
@@ -18,15 +18,15 @@ public class Principal {
     static Logger log = Logger.getLogger(Principal.class.getName());
 
     public static void pila() {
-//        PilaLista pila;
-//        pila = new PilaLista();
-//        pila.insertar(1);
+        PilaLista pila = new PilaLista();
+        pila.insertar(1);
+        log.info(pila.quitar());
     }
 
     public static void cola() {
-//        ColaLista cola;
-//        cola = new ColaLista();
-//        cola.insertar(0);
+        ColaLista cola = new ColaLista();
+        cola.insertar(0);
+        log.info(cola.quitar());
     }
 
     public static void main(String[] args) {

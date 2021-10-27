@@ -23,7 +23,7 @@ public class NodoCola {
     }
 
     //declaracion de la calse
-    class ColaLista {
+    static class ColaLista {
 
         protected NodoCola frente;
         protected NodoCola fin;

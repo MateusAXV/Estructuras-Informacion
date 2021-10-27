@@ -22,7 +22,7 @@ public class NodoPila {
         siguiente = null;
     }
 
-    class PilaLista {
+    static class PilaLista {
 
         private NodoPila cima;
 
@@ -61,12 +61,12 @@ public class NodoPila {
 
         //limpia toda la pila
         public void limpiarPila() {
-         NodoPila t;
-         while(!pilaVacia()){
-             t=cima;
-             cima=cima.siguiente;
-             t.siguiente=null;
-         }
+            NodoPila t;
+            while (!pilaVacia()) {
+                t = cima;
+                cima = cima.siguiente;
+                t.siguiente = null;
+            }
         }
     }
 

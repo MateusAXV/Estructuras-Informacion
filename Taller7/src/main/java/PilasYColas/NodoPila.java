@@ -13,8 +13,6 @@ public class NodoPila {
 
     /**
      * en las pilas, el primer elemento en llegar, es el ultimo en salir:
-     *
-     * ══ <-ultimo(este es es que se obtiene) ═════ ════════ <-primero
      */
     int elemento;
     NodoPila siguiente;

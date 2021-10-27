@@ -28,7 +28,6 @@ public class lista {
     }
 
     //Metodo para insertar Nodos
-
     public lista insertar(int elemento) {
         Nodo nuevo = new Nodo(elemento);
         if (ultimo != null) {
@@ -38,35 +37,6 @@ public class lista {
         ultimo = nuevo;
         longitud++;
         return this;
-    }
-
-    //metodo para eliminar Nodo   
-    public boolean eliminar(int elemento) {
-        Nodo actual;
-        boolean encontrado = false;
-        actual = ultimo;
-        while (actual.siguiente != ultimo && !encontrado) {
-            encontrado = (actual.siguiente.dato == elemento);
-            if (!encontrado) {
-                actual = actual.siguiente;
-            }
-        }
-        encontrado = (actual.siguiente.dato == elemento);
-        if (encontrado) {
-            Nodo aux = actual.siguiente;
-            if (ultimo == ultimo.siguiente) {
-                ultimo = null;
-
-            } else {
-                if (aux == ultimo) {
-                    ultimo = actual;
-                }
-                actual.siguiente = aux.siguiente;
-                longitud--;
-            }
-            aux = null;
-        }
-        return encontrado == true;
     }
 
     //metodo para mostrar la lista

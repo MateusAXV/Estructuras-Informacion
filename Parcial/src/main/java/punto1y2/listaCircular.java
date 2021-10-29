@@ -60,19 +60,15 @@ public class listaCircular {
         Nodo aux = ultimo.siguiente;
         int max = 0;
         do {
-
             if (aux.dato > ultimo.dato) {
                 max = aux.dato;
-                aux = aux.siguiente;
             } else if (aux.dato < ultimo.dato) {
                 max = ultimo.dato;
-                aux = aux.siguiente;
             } else {
                 aux = aux.siguiente;
             }
 
         } while (aux != ultimo.siguiente);
-
         aux = ultimo.siguiente;
         return max;
     }

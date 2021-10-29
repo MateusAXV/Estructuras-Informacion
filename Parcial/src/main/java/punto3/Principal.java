@@ -37,7 +37,7 @@ public class Principal {
             log.info(soldados.get(i));
         }
 
-        log.info("El soldado que va a pedir ayuda es: "
+        log.info("---El soldado que va a pedir ayuda es: "
                 + soldados.get(rta(numero, soldados.size())));
 
     }

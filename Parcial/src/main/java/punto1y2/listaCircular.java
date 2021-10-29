@@ -63,8 +63,10 @@ public class listaCircular {
 
             if (aux.dato > ultimo.dato) {
                 max = aux.dato;
+                aux = aux.siguiente;
             } else if (aux.dato < ultimo.dato) {
                 max = ultimo.dato;
+                aux = aux.siguiente;
             } else {
                 aux = aux.siguiente;
             }

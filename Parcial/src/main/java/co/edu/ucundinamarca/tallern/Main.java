@@ -1,11 +1,11 @@
-
 package co.edu.ucundinamarca.tallern;
 
 import org.apache.log4j.Logger;
 
 /**
  * Clase Principal
- * @author handresortiz
+ *
+ * @author A_Ximena_Vanegas_M
  */
 public class Main {
 

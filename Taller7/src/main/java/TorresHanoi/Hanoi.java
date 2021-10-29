@@ -26,14 +26,15 @@ public class Hanoi {
 
     public static void main(String[] args) {
         for (int i = 1; i <= numDiscos; i++) {
-            fila1.insertar(i);
+            fila1.insertar(i);//inserta el numero de discos
         }
+        //imprime la fila inicial
         log.info("\nOrigen\t\t" + fila1.listar() + "\nAuxiliar\t\t"
                 + fila2.listar() + "\nDestino\t\t" + fila3.listar() + "\n");
         Pasos(Integer.parseInt(fila1.obtenerCabeza()), 1, 2, 3);
     }
 
-    //metodo que solucina las torres de hanoi
+    //metodo que soluciona las torres de hanoi
     public static void Pasos(int num, int origen, int aux, int destino) {
         if (num == 1) {
             if (origen == 1) {
@@ -96,7 +97,7 @@ public class Hanoi {
 
             }
             Pasos(num - 1, aux, origen, destino);
-            
+
         }
     }
 

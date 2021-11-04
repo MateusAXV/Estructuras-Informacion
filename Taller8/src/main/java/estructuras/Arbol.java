@@ -45,7 +45,7 @@ public class Arbol {
         }
     }
 
-//recorrer el arbol
+//recorre el arbol de izquierda a derecha
     public void recorrer(Nodo n) {
         if (n != null) {
             recorrer(n.izquierda);

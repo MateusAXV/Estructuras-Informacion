@@ -17,10 +17,10 @@ public class Ejercicio2 {
 
     public static void main(String[] args) {
         Pilas lista = new Pilas();
-        lista.insertar("A");
-        lista.insertar("B");
-        lista.insertar("C");
-        lista.insertar("D");
+        lista.Push("A");
+        lista.Push("B");
+        lista.Push("C");
+        lista.Push("D");
 
         log.info(lista.listar());
     }

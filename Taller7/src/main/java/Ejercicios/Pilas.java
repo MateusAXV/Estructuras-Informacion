@@ -25,7 +25,7 @@ public class Pilas {
     }
 
     //insertar a la pila
-    public void insertar(Object dato) {
+    public void Push(Object dato) {
         Nodo nodo = new Nodo(dato);
         nodo.siguiente = cabeza;
         cabeza = nodo;
@@ -33,7 +33,7 @@ public class Pilas {
     }
 
     //obtener la cabeza de la pila
-    public String obtenerCabeza() {
+    public String Top() {
         String Dato = "";
         if (cabeza == null) {
             return null;

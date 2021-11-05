@@ -14,10 +14,10 @@ public class MainTest {
     @Test
     public void testEjercicio2() {
         Pilas lista = new Pilas();
-        lista.insertar("A");
-        lista.insertar("B");
-        lista.insertar("C");
-        lista.insertar("D");
+        lista.Push("A");
+        lista.Push("B");
+        lista.Push("C");
+        lista.Push("D");
         assertEquals("D C B A ", lista.listar());
     }
 

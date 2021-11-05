@@ -5,9 +5,7 @@
  */
 package Ejercicios;
 
-import static junit.framework.Assert.assertEquals;
 import org.apache.log4j.Logger;
-import org.junit.Test;
 
 /**
  *

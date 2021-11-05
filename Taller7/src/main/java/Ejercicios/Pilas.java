@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Ejercicios;
+
 /**
  *
  * @author A_Ximena_Vanegas_M
@@ -82,5 +83,10 @@ public class Pilas {
             primer = null;
             longitud = 0;
         }
+    }
+
+    //numero de objetos en la pila
+    public int contar() {
+        return longitud;
     }
 }

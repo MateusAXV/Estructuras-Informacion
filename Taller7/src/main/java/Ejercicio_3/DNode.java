@@ -15,14 +15,12 @@ public class DNode {
     Object val;
 
     public DNode() {
-
         this.next = null;
         this.prev = null;
         this.val = null;
     }
 
     public DNode(Object val, DNode first, DNode last) {
-
         this.next = first;
         this.prev = last;
         this.val = val;

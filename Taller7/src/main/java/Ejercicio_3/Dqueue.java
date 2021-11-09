@@ -10,6 +10,7 @@ package Ejercicio_3;
  * @author A_Ximena_Vanegas_M
  */
 public interface Dqueue {
+//interface por defecto
 
     void insertFirst(Object obj);
 

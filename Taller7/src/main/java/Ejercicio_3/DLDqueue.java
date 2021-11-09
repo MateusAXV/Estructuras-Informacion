@@ -36,8 +36,8 @@ public class DLDqueue implements Dqueue {
         size++;
 
     }
-//insetar de ultimo 
 
+//insetar de ultimo 
     public void insertLast(Object obj) {
         DNode t = tail;
         DNode node = new DNode();
@@ -50,8 +50,8 @@ public class DLDqueue implements Dqueue {
         }
         size++;
     }
-//quitar primero 
 
+//quitar primero
     public Object removeFirst() {
         if (head == null) {
             return null;
@@ -61,8 +61,8 @@ public class DLDqueue implements Dqueue {
         size--;
         return val;
     }
-//quitar el ultimo
 
+//quitar el ultimo
     public Object removeLast() {
         if (tail == null) {
             return null;
@@ -72,13 +72,13 @@ public class DLDqueue implements Dqueue {
         size--;
         return val;
     }
-//obtener el tamaño
 
+//obtener el tamaño
     public int size() {
         return size;
     }
-//obtener los datos
 
+//obtener los datos
     public String toString() {
         String s = "head [";
         DNode aux = head;

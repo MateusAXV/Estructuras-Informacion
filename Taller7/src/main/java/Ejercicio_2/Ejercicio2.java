@@ -14,14 +14,12 @@ import org.apache.log4j.Logger;
 public class Ejercicio2 {
 
     static Logger log = Logger.getLogger(Ejercicio2.class.getName());
-
     public static void main(String[] args) {
-        Pilas lista = new Pilas();
-        lista.Push("A");
-        lista.Push("B");
-        lista.Push("C");
-        lista.Push("D");
-
-        log.info(lista.listar());
+//        Pilas lista = new Pilas();
+//        lista.Push("A");
+//        lista.Push("B");
+//        lista.Push("C");
+//        lista.Push("D");
+//        log.info(lista.listar());
     }
 }

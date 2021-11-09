@@ -1,6 +1,6 @@
 package co.edu.ucundinamarca.tallern;
 
-import Ejercicios.Pilas;
+import Ejercicio_2.Pilas;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 import org.junit.Test;

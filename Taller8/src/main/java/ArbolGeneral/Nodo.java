@@ -19,6 +19,7 @@ public class Nodo {
     public Nodo(String dato) {
         info = dato;
         this.nHijos = 0;
+        
     }
     
     

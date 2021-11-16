@@ -5,15 +5,11 @@
  */
 package ArbolGeneral;
 
-import org.apache.log4j.Logger;
-
 /**
  *
  * @author A_Ximena_Vanegas_M
  */
 public class Nodo {
-
-    static Logger log = Logger.getLogger(Nodo.class.getName());
 
     String info;
     int nHijos;
@@ -48,8 +44,8 @@ public class Nodo {
         info = dato;
     }
 
-    public void verNodo() {
-        log.info(info + ",");
+    public String verNodo() {
+        return info + ",";
     }
 
 }

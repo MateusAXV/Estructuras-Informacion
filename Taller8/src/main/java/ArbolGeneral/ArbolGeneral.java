@@ -11,6 +11,8 @@ package ArbolGeneral;
  */
 public class ArbolGeneral {
 
+    private static String pre = "", pos = "", in = "", niv = "";
+    ;
     Nodo raiz;
 
     public Nodo insetarRaiz(String dato) {
@@ -34,11 +36,13 @@ public class ArbolGeneral {
         }
     }
 
-    //este metodo muestra los hijos de un nodo(recursivo)
-    public void imprimir(Nodo nodo) {
+    //estos metodos muestra los hijos de un nodo(recursivo)
+    public String printPreorden(Nodo nodo) {
         for (int i = 0; i < nodo.nHijos; i++) {
-            nodo.hijos[i].verNodo();
-            imprimir(nodo.hijos[i]);
+            pre = pre + nodo.hijos[i].verNodo();
+            printPreorden(nodo.hijos[i]);
         }
+        return pre;
     }
+
 }

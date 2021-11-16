@@ -35,14 +35,18 @@ public class Main {
         //estos son los hijos del nodo "f"
         arbol.insertar(nodo, "g", "f");
 
-        //imprimirmos el arbol desde la raiz preorden
+        //imprimirmos el arbol desde la raiz preorden 2.006s
         log.info("PREORDEN: " + arbol.Preorden(nodo));
 
-        //imprimirmos el arbol desde la raiz postorden
+        //imprimirmos el arbol desde la raiz postorden 2.012s
         log.info("POSTORDEN: " + arbol.Postorden(nodo));
 
-        //imprimirmos el arbol desde la raiz inorden
+        //imprimirmos el arbol desde la raiz inorden 2.006s
         log.info("INORDEN: " + arbol.Inorden(nodo));
+        
+        //imprimirmos el arbol desde la raiz por niveles 1.990s
+        log.info("NIVELES: " + arbol.Niveles(nodo));
+        
 
     }
 }

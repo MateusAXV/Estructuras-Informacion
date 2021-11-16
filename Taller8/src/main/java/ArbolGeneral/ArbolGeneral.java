@@ -12,32 +12,40 @@ package ArbolGeneral;
 public class ArbolGeneral {
 
     private static String preorden = "", postorden = "", inorden = "", niveles = "";
-    
+
     Nodo raiz;
 
     public Nodo insetarRaiz(String dato) {
+        //va guardando en una cadena de texto por niveles
+        niveles = niveles + dato + ",";
         raiz = new Nodo(dato);
         return raiz;
     }
 
     //insertar datos al arbol indicando el padre(recursivo)
     public void insertar(Nodo nodo, String dato, String padre) {
+
         Nodo nuevo = new Nodo(dato);
         if (nodo.getDato().equals(padre)) {
             nodo.aumentarHijo(nuevo);
+            //va guardando en una cadena de texto por niveles
+            niveles = niveles + dato + ",";
         } else {
             for (int i = 0; i < nodo.nHijos; i++) {
                 if (nodo.hijos[i].getDato().equals(padre)) {
                     nodo.hijos[i].aumentarHijo(nuevo);
+                    //va guardando en una cadena de texto por niveles
+                    niveles = niveles + dato + ",";
                 } else {
                     insertar(nodo.hijos[i], dato, padre);
+
                 }
             }
         }
     }
 
     //RECORRIDO    
-    public String Preorden(Nodo nodo) {// imprimir en preorden 
+    public String Preorden(Nodo nodo) {// recorrer en preorden 
         if (nodo.nHijos == 0) {
             preorden = preorden + nodo.verNodo();
         } else if (nodo.nHijos > 0) {
@@ -50,7 +58,7 @@ public class ArbolGeneral {
         return preorden;
     }
 
-    public String Postorden(Nodo nodo) {//imprimir en postorden
+    public String Postorden(Nodo nodo) {//recorrer en postorden
         if (nodo != null) {
             for (int i = 0; i < nodo.nHijos; i++) {
                 Postorden(nodo.hijos[i]);
@@ -60,7 +68,7 @@ public class ArbolGeneral {
         return postorden;
     }
 
-    public String Inorden(Nodo nodo) {//imprimir en inorden
+    public String Inorden(Nodo nodo) {//recoreer en inorden
         if (nodo.nHijos == 0) {
             inorden = inorden + nodo.verNodo();
         } else if (nodo.nHijos > 0) {
@@ -73,4 +81,7 @@ public class ArbolGeneral {
         return inorden;
     }
 
+    public String Niveles(Nodo nodo) {
+        return niveles;
+    }
 }

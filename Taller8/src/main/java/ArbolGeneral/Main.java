@@ -21,7 +21,6 @@ public class Main {
         ArbolGeneral arbol = new ArbolGeneral();
         //creamos nuestro nodo raiz
         Nodo nodo = arbol.insetarRaiz("a");
-        arbol.insertar(nodo, "a", "a");
 
         //insertamos los nodos 
         //estos son los hijos del nodo "a"
@@ -37,8 +36,13 @@ public class Main {
         arbol.insertar(nodo, "g", "f");
 
         //imprimirmos el arbol desde la raiz preorden
-        log.info(arbol.printPreorden(nodo));
-       
+        log.info("PREORDEN: " + arbol.Preorden(nodo));
+
+        //imprimirmos el arbol desde la raiz postorden
+        log.info("POSTORDEN: " + arbol.Postorden(nodo));
+
+        //imprimirmos el arbol desde la raiz inorden
+        log.info("INORDEN: " + arbol.Inorden(nodo));
 
     }
 }

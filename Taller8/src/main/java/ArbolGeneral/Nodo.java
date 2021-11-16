@@ -10,7 +10,7 @@ package ArbolGeneral;
  * @author A_Ximena_Vanegas_M
  */
 public class Nodo {
-
+//NODO PARA UN ARBOL GENERAL 
     String info;
     int nHijos;
     Nodo hijos[];

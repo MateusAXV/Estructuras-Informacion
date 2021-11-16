@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license header, choose License Headers inorden Project Properties.
  * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * and open the template inorden the editor.
  */
 package ArbolGeneral;
 
@@ -11,8 +11,8 @@ package ArbolGeneral;
  */
 public class ArbolGeneral {
 
-    private static String pre = "", pos = "", in = "", niv = "";
-    ;
+    private static String preorden = "", postorden = "", inorden = "", niveles = "";
+    
     Nodo raiz;
 
     public Nodo insetarRaiz(String dato) {
@@ -36,13 +36,41 @@ public class ArbolGeneral {
         }
     }
 
-    //estos metodos muestra los hijos de un nodo(recursivo)
-    public String printPreorden(Nodo nodo) {
-        for (int i = 0; i < nodo.nHijos; i++) {
-            pre = pre + nodo.hijos[i].verNodo();
-            printPreorden(nodo.hijos[i]);
+    //RECORRIDO    
+    public String Preorden(Nodo nodo) {// imprimir en preorden 
+        if (nodo.nHijos == 0) {
+            preorden = preorden + nodo.verNodo();
+        } else if (nodo.nHijos > 0) {
+            preorden = preorden + nodo.verNodo();
+            Preorden(nodo.hijos[0]);
+            for (int i = 1; i < nodo.nHijos; i++) {
+                Preorden(nodo.hijos[i]);
+            }
         }
-        return pre;
+        return preorden;
+    }
+
+    public String Postorden(Nodo nodo) {//imprimir en postorden
+        if (nodo != null) {
+            for (int i = 0; i < nodo.nHijos; i++) {
+                Postorden(nodo.hijos[i]);
+            }
+            postorden = postorden + nodo.verNodo();
+        }
+        return postorden;
+    }
+
+    public String Inorden(Nodo nodo) {//imprimir en inorden
+        if (nodo.nHijos == 0) {
+            inorden = inorden + nodo.verNodo();
+        } else if (nodo.nHijos > 0) {
+            Inorden(nodo.hijos[0]);
+            inorden = inorden + nodo.verNodo();
+            for (int i = 1; i < nodo.nHijos; i++) {
+                Inorden(nodo.hijos[i]);
+            }
+        }
+        return inorden;
     }
 
 }

@@ -19,16 +19,6 @@ public class MainTest {
     //en este test se prueban todos los recorridos solicitados en el taller
     @Test
     public void testRecorridos() {
-        insertarNodos();
-        assertEquals("a,b,c,e,f,g,d,", arbol.Preorden(nodo));
-        assertEquals("b,e,g,f,c,d,a,", arbol.Postorden(nodo));
-        assertEquals("b,a,e,c,g,f,d,", arbol.Inorden(nodo));
-        assertEquals("a,b,c,d,e,f,g,", arbol.Niveles(nodo));
-    }
-
-    //funcion que llena el arbol segun el ejercicio planteado
-    public static void insertarNodos() {
-
         //insertamos los nodos 
         //estos son los hijos del nodo "a"
         arbol.insertar(nodo, "b", "a");
@@ -41,6 +31,12 @@ public class MainTest {
 
         //estos son los hijos del nodo "f"
         arbol.insertar(nodo, "g", "f");
+
+        //aqui se hacen las respectivas comparaciones 
+        assertEquals("a,b,c,e,f,g,d,", arbol.Preorden(nodo));
+        assertEquals("b,e,g,f,c,d,a,", arbol.Postorden(nodo));
+        assertEquals("b,a,e,c,g,f,d,", arbol.Inorden(nodo));
+        assertEquals("a,b,c,d,e,f,g,", arbol.Niveles(nodo));
     }
 
 }

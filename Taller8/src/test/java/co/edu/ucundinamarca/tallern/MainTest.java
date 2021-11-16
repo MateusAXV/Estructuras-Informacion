@@ -3,12 +3,11 @@ package co.edu.ucundinamarca.tallern;
 import ArbolGeneral.ArbolGeneral;
 import ArbolGeneral.Nodo;
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 import org.junit.Test;
 
 /**
  *
- * @author hortizr
+ * @author A_Ximena_Vanegas_M
  */
 public class MainTest {
 
@@ -27,7 +26,6 @@ public class MainTest {
         assertEquals("a,b,c,d,e,f,g,", arbol.Niveles(nodo));
     }
 
-   
     //funcion que llena el arbol segun el ejercicio planteado
     public static void insertarNodos() {
 

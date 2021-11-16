@@ -16,7 +16,7 @@ public class principal {
     static Logger log = Logger.getLogger(principal.class.getName());
 
     public static void main(String[] args) {
-        Arbol arbol = new Arbol();
+        ArbolBinario arbol = new ArbolBinario();
         arbol.insertar(1, "pera");
         arbol.insertar(3, "manzana");
         arbol.insertar(8, "limon");

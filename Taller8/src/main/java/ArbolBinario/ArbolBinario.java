@@ -11,13 +11,13 @@ import org.apache.log4j.Logger;
  *
  * @author A_Ximena_Vanegas_M
  */
-public class Arbol {
+public class ArbolBinario {
 
-    static Logger log = Logger.getLogger(Arbol.class.getName());
+    static Logger log = Logger.getLogger(ArbolBinario.class.getName());
 
     Nodo raiz;
 
-    public Arbol() {
+    public ArbolBinario() {
         raiz = null;
     }
 
